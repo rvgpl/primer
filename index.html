@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>Primer</title>
+
+	<meta name="author" content="Ravigopal Kesari">
+	<meta name="description" content="A simple css starter pack.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../css/main.min.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+</head>
+
+<body>
+
+	<header class="text-center vertical-center intro">
+		<div class="small-container">
+			<h1>Primer</h1>
+			<p>Primer is a minimal mobile-first CSS boilerplate that provides helpful styling for buttons, forms, tables, lists, and typography for quick prototyping.</p>
+		</div>
+	</header>
+
+	<section class="setup content-section">
+		<div class="medium-container">
+			<h2>Download and Installation</h2>
+			<p>Primer uses CSS variables to configure styles. <a href="">normalize.css</a> is used acheive browser consistent styles.</p>
+			<p>It also uses <a href="https://github.com/jonathantneal/precss">precss</a> and <a href="https://github.com/postcss/autoprefixer">autoprefixer</a>, PostCSS plugins to create support custom-media queries, custom-selectors and fallbacks to CSS variables.</p>
+			<ol>
+				<li>
+					Clone the repo.
+				</li>
+				<li>
+					Run <code>npm install</code> to install dev dependencies for build.
+				</li>
+				<li>
+					Modify variables values in the file <code>_variables.css</code>
+				</li>
+				<li>
+					Run <code>gulp build</code> to generate the css file.
+				</li>
+				<li>
+					Generated CSS file is found in the <code>dist</code> folder.
+				</li>
+			</ol>
+			</div>
+	</section>
+
+	<section>
+			<main class="content">
+				<aside class="sticky-nav">
+					<nav>
+						<ul>
+							<li><a href="#html">HTML</a></li>
+							<li><a href="#containers">Containers</a></li>
+							<li><a href="#Grids">Grids</a></li>
+							<li><a href="#typography">Typography</a></li>
+							<li><a href="#buttons">Buttons</a></li>
+							<li><a href="#forms">Forms</a></li>
+							<li><a href="#tables">Tables</a></li>
+							<li><a href="#lists">Lists</a></li>
+							<li><a href="#code">Code</a></li>
+							<li><a href="#helpers">Helpers</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<div class="medium-container">
+
+					<section id="html">
+
+						<article>
+							<h2>HTML</h2>
+
+							<p>A basic HTML5 template that does the following:</p>
+							<ul>
+
+								<li>Sets the language of the content. Default to <code>en</code></li>
+								<li>Defines the viewport meta tag to enable responsiveness and consistency. </li>
+								<li>Includes link to primer CSS file</a></li>
+								<li>Includes link to a blank JS file</a></li>
+							</ul>
+							<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1,shrink-to-fit=no&quot;&gt;
+
+  &lt;title&gt;&lt;/title&gt;
+	&lt;meta name=&quot;description&quot; content=&quot; &quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.min.css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;!-- Add your content here --&gt;
+
+&lt;script src=&quot;js/script.js&quot;>&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+						</article>
+
+					</section>
+
+					<section id="containers">
+						<article>
+							<h2>Containers</h2>
+							<p>There are two container sizes for content that are centered with left and right padding. Content without a container will span the width of the viewport.</p>
+							<pre><code class="language-html">&lt;div class=&quot;small-container&quot;&gt;Small&lt;/div&gt;
+&lt;div class=&quot;medium-container&quot;&gt;Medium&lt;/div&gt;
+&lt;div class=&quot;container&quot;&gt;Large&lt;/div&gt;</code></pre>
+
+							<table>
+								<thead>
+									<tr>
+										<th>Small</th>
+										<th>Medium</th>
+										<th>Large</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>800px</td>
+										<td>1000px</td>
+										<td>1200px</td>
+									</tr>
+								</tbody>
+							</table>
+						</article>
+					</section>
+				</div>
+
+				<div class="medium-container">
+						<section id="Grids">
+								<article>
+									<h2>Grids</h2>
+									<p>Grids are intentionally left out. Using CSS Grid to build custom layouts better and faster. More details about how to build layouts using CSS Grids can be found at <a href-"https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">MDN</a></p>
+								</article>
+							</section>
+
+				<section id="typography">
+
+						<article>
+							<h2>Typography</h2>
+							<p>The font size is set to <code>62.5%</code> on the <code>html</code> element, so all font sizing will cascade from the root.</p>
+							<p>So, <code>1rem = 10px</code> instead of 16px which is default for a browser. To set any pixel value to rem, we can just divide it by 10.</p>
+							<p>Lets say you want to set a value of a <code>&lt;p&gt;</code> tag to 18px. We can set it as <code>1.8rem</code></p>
+							<p>Headings all have the same line-height and margins, and only the font size is individually defined.</p>
+							<h1 style="margin: 1rem 0;">Heading 1</h1>
+							<h2 style="margin: 1rem 0;">Heading 2</h2>
+							<h3 style="color:#404040;margin: 1rem 0;">Heading 3</h3>
+							<h4 style="margin: 1rem 0;">Heading 4</h4>
+							<h5 style="margin: 1rem 0;">Heading 5</h5>
+						</article>
+
+						<article>
+							<h3>Blockquote</h3>
+							<p>Blockquote is set to have a left border, with the browser default padding removed. A <code>cite</code> will be right aligned and italicized.
+								<pre><code class="language-html">&lt;blockquote&gt;
+	&lt;p&gt;If you tell the truth, you don't have to remember anything.&lt;/p&gt;
+	&lt;cite&gt;― Mark Twain&lt;/cite&gt;
+&lt;/blockquote&gt;</code></pre>
+								<blockquote>
+									<p>If you tell the truth, you don't have to remember anything.</p>
+									<cite>― Mark Twain</cite>
+								</blockquote>
+						</article>
+
+					</section>
+
+					<section id="buttons">
+
+						<article>
+							<h2>Buttons</h2>
+							<p>Button elements, links with a <code>button</code> class, and input elements should all render exactly the same.</p>
+							<pre><code class="language-html">&lt;button&gt;Button&lt;/button&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;Input&quot;&gt;
+&lt;a class=&quot;button&quot;&gt;Link&lt;/a&gt;</code></pre>
+							<button>Button</button>
+							<input type="submit" value="Submit">
+							<input type="button" value="Input">
+							<a class="button">Link</a>
+						</article>
+
+						<article>
+							<h3>Accent Buttons</h3>
+							<p>Adding an <code>accent-button</code> class will display a secondary color.</p>
+							<pre><code class="language-html">&lt;button class="accent-button"&gt;Button&lt;/button&gt;</code></pre>
+							<button class="accent-button">Button</button>
+							<input type="submit" value="Submit" class="accent-button">
+							<input type="button" value="Input" class="accent-button">
+							<a class="button accent-button">Link</a>
+						</article>
+
+						<article>
+							<h3>Muted Buttons</h3>
+							<p>Adding a <code>muted-button</code> class will create ghost/outline buttons.</p>
+							<pre><code class="language-html">&lt;button class="muted-button"&gt;Button&lt;/button&gt;</code></pre>
+							<button class="muted-button">Button</button>
+							<input type="submit" value="Submit" class="muted-button">
+							<input type="button" value="Input" class="muted-button">
+							<a class="muted-button button">Link</a>
+						</article>
+
+						<article>
+							<h3>Round Buttons</h3>
+							<p>Adding a <code>round-button</code> class will create rounded buttons.</p>
+							<pre><code class="language-html">&lt;button class="round-button"&gt;Button&lt;/button&gt;</code></pre>
+							<button class="round-button">Button</button>
+							<input type="submit" value="Submit" class="round-button">
+							<input type="button" value="Input" class="round-button">
+							<a class="round-button button">Link</a>
+						</article>
+
+						<article>
+							<h3>Square Buttons</h3>
+							<p>Adding a <code>square-button</code> class will create square buttons.</p>
+							<pre><code class="language-html">&lt;button class="square-button"&gt;Button&lt;/button&gt;</code></pre>
+							<button class="square-button">Button</button>
+							<input type="submit" value="Submit" class="square-button">
+							<input type="button" value="Input" class="square-button">
+							<a class="square-button button">Link</a>
+						</article>
+
+						<article>
+							<h3>Full Width Buttons</h3>
+							<p>Adding a <code>full-button</code> class will create full-width, block level buttons. Button styles can be combined.</p>
+							<pre><code class="language-html">&lt;button class="full-button"&gt;Button&lt;/button&gt;</code></pre>
+							<button class="full-button">Button</button>
+							<input type="submit" value="Submit" class="full-button accent-button square-button">
+							<input type="button" value="Input" class="full-button round-button">
+							<a class="full-button muted-button button">Link</a>
+						</article>
+					</section>
+
+					<section id="forms">
+
+						<article>
+							<h2>Forms</h2>
+							<p>Default forms will have full-width, block level labels, inputs, selects, and textareas.</p>
+							<pre><code class="language-html">&lt;form&gt;
+  &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;First Name&quot;&gt;
+  &lt;label for=&quot;choose&quot;&gt;Select&lt;/label&gt;
+  &lt;select id=&quot;choose&quot;&gt;
+    &lt;option disabled selected&gt;Please select&lt;/option&gt;
+    &lt;option value="option-1"&gt;Option 1&lt;/option&gt;
+    &lt;option value="option-2"&gt;Option 2&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;label for=&quot;comments&quot;&gt;Additional Comments&lt;/label&gt;
+  &lt;textarea id=&quot;comments&quot;&gt;&lt;/textarea&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+    Remember me
+  &lt;/label&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;</code></pre>
+
+							<form>
+								<label for="name">Name</label>
+								<input type="text" id="name" placeholder="First Name">
+								<label for="email">Email</label>
+								<input type="email" id="email" placeholder="Email address">
+								<label for="choose">Select</label>
+								<select id="choose">
+									<option disabled selected>Please select</option>
+									<option value="option-1">Option 1</option>
+									<option value="option-2">Option 2</option>
+								</select>
+								<label for="comments">Additional Comments</label>
+								<textarea id="comments"></textarea>
+								<label>
+									<input type="checkbox"> Remember me
+								</label>
+								<input type="button" value="Submit">
+							</form>
+						</article>
+
+						<article>
+							<h3>Form Validation</h3>
+							<p>An input field with a <code>has-error</code> class.</p>
+							<pre><code class="language-html">&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Name&quot; class=&quot;has-error&quot;&gt;</code></pre>
+							<form>
+								<label for="name-error">Name</label>
+								<input type="text" id="name-error" placeholder="Name" class="has-error">
+							</form>
+						</article>
+
+					</section>
+
+					<section id="tables">
+
+						<article>
+							<h2>Tables</h2>
+							<p>Tables are set to a width of 100%, with a bottom border and bold headings.</p>
+							<pre><code class="language-html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Head 1&lt;/th&gt;
+      &lt;th&gt;Head 2&lt;/th&gt;
+      &lt;th&gt;Head 3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Footer 1&lt;/th&gt;
+      &lt;th&gt;Footer 2&lt;/th&gt;
+      &lt;th&gt;Footer 3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Description 1&lt;/td&gt;
+      &lt;td&gt;Description 2&lt;/td&gt;
+      &lt;td&gt;Description 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Description 1&lt;/td&gt;
+      &lt;td&gt;Description 2&lt;/td&gt;
+      &lt;td&gt;Description 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Description 1&lt;/td&gt;
+      &lt;td&gt;Description 2&lt;/td&gt;
+      &lt;td&gt;Description 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+							<table>
+								<thead>
+									<tr>
+										<th>Head 1</th>
+										<th>Head 2</th>
+										<th>Head 3</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<th>Footer 1</th>
+										<th>Footer 2</th>
+										<th>Footer 3</th>
+									</tr>
+								</tfoot>
+								<tbody>
+									<tr>
+										<td>Description 1</td>
+										<td>Description 2</td>
+										<td>Description 3</td>
+									</tr>
+									<tr>
+										<td>Description 1</td>
+										<td>Description 2</td>
+										<td>Description 3</td>
+									</tr>
+									<tr>
+										<td>Description 1</td>
+										<td>Description 2</td>
+										<td>Description 3</td>
+									</tr>
+								</tbody>
+							</table>
+						</article>
+
+						<article>
+							<h3>Striped Tables</h3>
+							<p>Add a <code>striped</code> class for alternating row background colors.</p>
+							<pre><code class="language-html">&lt;table class=&quot;striped-table&quot;&gt;
+  &lt;!-- etc --&gt;
+&lt;/table&gt;</code></pre>
+							<table class="striped-table">
+								<thead>
+									<tr>
+										<th>Head 1</th>
+										<th>Head 2</th>
+										<th>Head 3</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Description 1</td>
+										<td>Description 2</td>
+										<td>Description 3</td>
+									</tr>
+									<tr>
+										<td>Description 1</td>
+										<td>Description 2</td>
+										<td>Description 3</td>
+									</tr>
+									<tr>
+										<td>Description 1</td>
+										<td>Description 2</td>
+										<td>Description 3</td>
+									</tr>
+								</tbody>
+							</table>
+						</article>
+
+						<article>
+							<h3>Contained Tables</h3>
+							<p>Wrap the table in a <code>contain-table</code> class to prevent tables with a lot of content from stretching on small screens.</p>
+							<pre><code class="language-html">&lt;div class=&quot;contain-table&quot;&gt;
+  &lt;table&gt;
+  &lt;!-- etc --&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+							<div class="contain-table">
+								<table>
+									<thead>
+										<tr>
+											<th>Head 1</th>
+											<th>Head 2</th>
+											<th>Head 3</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">https://developer.mozilla.org/en-US/docs/Web/HTTP</a></td>
+											<td>Description 2</td>
+											<td>Description 3</td>
+										</tr>
+										<tr>
+											<td>Description 1</td>
+											<td>Description 2</td>
+											<td>Description 3</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>Footer 1</td>
+											<td>Footer 2</td>
+											<td>Footer 3</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</article>
+
+					</section>
+
+					<section id="lists">
+
+						<article>
+							<h2>Lists</h2>
+							<p>Regular ordered and unordered lists have no special styling applied to them.</p>
+							<pre><code class="language-html">&lt;ul&gt;
+	&lt;li&gt;List item one
+		&lt;ul&gt;
+			&lt;li&gt;Nested list item&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;List item two&lt;/li&gt;
+	&lt;li&gt;List item three&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+							<div class="row">
+								<div class="large-50">
+									<ul>
+										<li>List item one
+											<ul>
+												<li>Nested list item </li>
+											</ul>
+										</li>
+										<li>List item two</li>
+										<li>List item three</li>
+									</ul>
+								</div>
+								<div class="large-50">
+									<ol>
+										<li>List item one
+											<ol>
+												<li>Nested list item</li>
+											</ol>
+										</li>
+										<li>List item two</li>
+										<li>List item three</li>
+									</ol>
+								</div>
+							</div>
+						</article>
+
+						<article>
+							<h3>Definition Lists</h3>
+							<p>Definition titles are bold, and margins have been placed after each description.</p>
+							<pre><code class="language-html">&lt;dl&gt;
+	&lt;dt&gt;Definition Title One&lt;/dt&gt;
+	&lt;dd&gt;First definition description&lt;/dd&gt;
+	&lt;dt&gt;Definition Title Two&lt;/dt&gt;
+	&lt;dd&gt;First definition description&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+							<dl>
+								<dt>Definition Title One</dt>
+								<dd>First definition description</dd>
+								<dt>Definition Title Two</dt>
+								<dd>First definition description</dd>
+							</dl>
+						</article>
+
+					</section>
+
+					<section id="code">
+
+						<article>
+							<h2>Code</h2>
+							<p>Style has been added for inline <code>&lt;code&gt;</code> tags, and <code>&lt;kbd&gt;</code> is a <kbd>keyboard input</kbd>. </p>
+							<o>Place blocks of preformatted code in a <code>&lt;pre&gt;&lt;code&gt;</code>.</p>
+								<pre><code>class Dog extends Animal {
+	bark() {
+		console.log("Woof!, Woof!");
+	}
+}</code></pre>
+						</article>
+
+					</section>
+
+					<section id="helpers">
+
+						<article>
+							<h2>Helpers</h2>
+							<p>Helper classes are helpful for templating.</p>
+						</article>
+
+						<article>
+							<h3>Vertical Center</h3>
+							<p>Vertically center an element with the <code>vertical-center</code> class. (Uses <a href="http://caniuse.com/#search=flexbox" target="_blank">Flexbox</a>.)</p>
+							<pre><code class="language-html">&lt;div class="vertical-center"&gt;
+	&lt;div&gt;Vertically centered&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+							<div class="vertical-center example" style="height: 100px;">
+								<div class="example">Vertically centered</div>
+							</div>
+						</article>
+
+						<article>
+							<h3>Text Alignment</h3>
+							<p>Use <code>text-left</code>, <code>text-right</code>, and <code>text-center</code> to align content.</p>
+							<pre><code class="language-html">&lt;p class=&quot;text-left&quot;&gt;Left&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;Center&lt;/p&gt;
+&lt;p class=&quot;text-right&quot;&gt;Right&lt;/p&gt;</code></pre>
+							<p class="text-left"><span class="example" style="padding: 5px;">Left</span></p>
+							<p class="text-center"><span class="example" style="padding: 5px;">Center</span></p>
+							<p class="text-right"><span class="example" style="padding: 5px;">Right</span></p>
+						</article>
+
+						<article>
+							<h3>Screen Reader Text</h3>
+							<p>Accessibility is important - if you have a label that should be hidden but accessible, or use an icon as a link, or want to skip navigation, use the <code>screen-reader-text</code> class to hide content visually.
+								<pre><code class="language-html">&lt;a class=&quot;screen-reader-text&quot; href=&quot;#content&quot;&gt;Skip Navigation&lt;/a&gt;</code></pre>
+						</article>
+
+						<article>
+							<h3>Responsive Images</h3>
+							<p>Add a <code>responsive-image</code> class for responsive images.</p>
+							<pre><code class="language-html">&lt;img src="#" class="responsive-image" alt="Responsive Image"&gt;</code></pre>
+							<img src="https://placehold.it/1000x100" class="responsive-image" alt="Example of responsive-image CSS class">
+						</article>
+
+						<article>
+							<h3>More Helper Classes</h3>
+							<table>
+								<thead>
+									<tr>
+										<th>Class</th>
+										<th>What it does</th>
+									</tr>
+								</thead>
+								<tr>
+									<td><code>.block</code></td>
+									<td><code>display: block</code></td>
+								</tr>
+								<tr>
+									<td><code>.inline-block</code></td>
+									<td><code>display: inline-block</code></td>
+								</tr>
+								<tr>
+									<td><code>.inline</code></td>
+									<td><code>display: inline</code></td>
+								</tr>
+								<tr>
+									<td><code>.show</code></td>
+									<td><code>display: block !important</code></td>
+								</tr>
+								<tr>
+									<td><code>.hide</code></td>
+									<td><code>display: none !important</code></td>
+								</tr>
+								<tr>
+									<td><code>.padding-top</code></td>
+									<td><code>padding-top: 2rem</code></td>
+								</tr>
+								<tr>
+									<td><code>.no-padding-top</code></td>
+									<td><code>padding-top: 0</code></td>
+								</tr>
+								<tr>
+									<td><code>.padding-bottom</code></td>
+									<td><code>padding-bottom: 2rem</code></td>
+								</tr>
+								<tr>
+									<td><code>.no-padding-bottom</code></td>
+									<td><code>padding-bottom: 0</code></td>
+								</tr>
+								<tr>
+									<td><code>.margin-top</code></td>
+									<td><code>margin-top: 2rem</code></td>
+								</tr>
+								<tr>
+									<td><code>.no-margin-top</code></td>
+									<td><code>margin-top: 0</code></td>
+								</tr>
+								<tr>
+									<td><code>.margin-bottom</code></td>
+									<td><code>margin-bottom: 2rem</code></td>
+								</tr>
+								<tr>
+									<td><code>.no-margin-bottom</code></td>
+									<td><code>margin-bottom: 0</code></td>
+								</tr>
+								<tr>
+									<td><code>.content-section</code></td>
+									<td><code>padding: 60px 0</code> (30px on mobile)</td>
+								</tr>
+							</table>
+						</article>
+
+					</section>
+
+
+				</div>
+
+				<footer class="footer text-center">
+					<div class="medium-container">
+						<p class="padding-top">
+							Built by <a href="https://www.rvgpl.xyz">rvgpl</a>. <a href="https://github.com/rvgpl/primer" target="_blank">View on GitHub</a>.</p>
+					</div>
+				</footer>
+			</main>
+	</section>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/prism.min.js" async></script>
+</body>
+
+</html>

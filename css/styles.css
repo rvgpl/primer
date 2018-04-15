@@ -1,0 +1,47 @@
+.intro {
+  color: whitesmoke;
+  background-color: #0366EE;
+  padding: 5rem;
+}
+
+.intro h1 {
+  font-size: 10rem;
+  color: whitesmoke;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+.intro p {
+  font-size: 3rem;
+}
+
+.sticky-nav {
+  display: none;
+}
+
+@media only screen and (min-width: 750px) {
+  .sticky-nav {
+    display: block;
+    position: -webkit-sticky;
+    position: sticky;
+    max-width: 40rem;
+    top: 3rem;
+    left: 3rem;
+    float: left;
+  }
+}
+
+.sticky-nav ul {
+  padding: 0;
+  list-style: none;
+}
+
+.sticky-nav li a {
+  color: #333;
+}
+.sticky-nav i {
+  margin-right: 1rem;
+}
+.sticky-nav li a:hover {
+  color: #0366EE;
+}
+/*# sourceMappingURL=styles.css.map */
