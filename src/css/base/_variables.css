@@ -1,0 +1,109 @@
+/* Variables
+ * =============== */
+
+/* Breakpoints */
+
+@custom-media --viewport-medium only screen and (min-width: 750px);
+@custom-media --viewport-large only screen and (min-width: 1100px);
+/* Custom Selectors */
+
+@custom-selector :--forms [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea;
+@custom-selector :--buttons .button, a.button, button, [type=submit], [type=reset], [type=button];
+:root {
+  /* Containers */
+  --smallContainer: 800px;
+  --mediumContainer: 1000px;
+  --largeContainer: 1200px;
+  /* Colors */
+  --background: white;
+  --primaryColor: #0366EE;
+  --secondaryColor: #FCB42A;
+  --accentColor: #cdcdcd;
+  --alternateBackground: #fafafa;
+  --alternateColor: #404040;
+  --linkColor: var(--primaryColor);
+  --linkHoverColor: color-mod(var(--primaryColor) shade(50%));
+  --highlight: #ffeea8;
+  --error: #D33C40;
+  /* Typography */
+  --systemFont: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+  /* Body Font */
+  --fontSize: 1.6rem;
+  --bodyFontSize: 1.6rem;
+  --fontStyle: normal;
+  --fontWeight: normal;
+  --fontColor: #404040;
+  --fontFamily: var(--systemFont);
+  --lineHeight: 1.5;
+  /* Headings */
+  --headingFontColor: #404040;
+  --headingFontWeight: 600;
+  --headingFontFamily: var(--systemFont);
+  --headingLineHeight: 1.2;
+  /* Font scale */
+  --fs1: 2.8rem;
+  --fs2: 2.4rem;
+  --fs3: 2rem;
+  --fs4: 1.8rem;
+  --fs5: 1.6rem;
+  /* Spacing */
+  --padding: 1.6rem;
+  --margin: 2.4rem;
+  --contentSpacing: 3rem 0;
+  /* Borders */
+  --borderWidth: 0.1rem;
+  --borderStyle: solid;
+  --borderColor: #dedede;
+  --borderRadius: 0.4rem;
+  --borders: var(--borderWidth) var(--borderStyle) var(--borderColor);
+  --blockquoteBorder: 0.4rem solid var(--primaryColor);
+  /* Buttons */
+  --buttonBackground: var(--primaryColor);
+  --buttonBackgroundHover: color-mod(var(--primaryColor) shade(30%));
+  --buttonColor: #ffffff;
+  --buttonFontWeight: 600;
+  --buttonFontFamily: var(--systemFont);
+  --buttonFontSize: 1.6rem;
+  --buttonBorderWidth: 0.1rem;
+  --buttonBorderStyle: solid;
+  --buttonBorderColor: var(--buttonBackground);
+  --buttonBorderRadius: var(--borderRadius);
+  --buttonTextTransform: none;
+  --accentButtonBackground: var(--secondaryColor);
+  --accentButtonColor: #fff;
+  --accentButtonColorHover: #fff;
+  /* Muted buttons */
+  --mutedBorder: 0.1rem solid var(--accentColor);
+  --mutedBorderHover: 0.1rem solid color-mod(var(--accentColor) shade(30%));
+  --mutedBackground: transparent;
+  --mutedBackgroundHover: transparent;
+  --mutedColor: color-mod(var(--accentColor) shade(50%));
+  --mutedColorHover: color-mod(var(--accentColor) shade(50%));
+  --roundedButtonRadius: 4rem;
+  /* Forms */
+  --inputBackground: transparent;
+  --placeholder: color-mod(var(--accentColor) shade(20%));
+  --formBorderColor: #cdcdcd;
+  --formBorderHoverColor: color-mod(#cdcdcd shade(10%));
+  --formBorderFocusColor: var(--linkColor);
+  /* Tables */
+  --stripes: #f8f8f8;
+  --caption: #ababab;
+  /* Code */
+  --codeColor: #000;
+  --codeFontSize: 1.4rem;
+  --codeFontFamily: Menlo, monospace;
+  --codeBackground: transparent;
+  --codeBorder: var(--borders);
+}
+
+@media (--viewport-medium) {
+  :root {
+    --fs1: 3.6rem;
+    --fs2: 3.2rem;
+    --fs3: 2.8rem;
+    --fs4: 2.4rem;
+    --fs5: 2rem;
+    --contentSpacing: 6rem 0;
+  }
+}

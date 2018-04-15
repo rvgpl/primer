@@ -1,0 +1,190 @@
+/* Scaffolding
+  =============== */
+
+/* HTML base */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: var(--fontStyle) var(--fontStyle) var(--fontWeight) 1rem / var(--lineHeight) var(--fontFamily);
+  font-size: 62.5%;
+}
+
+/* Body base */
+
+body {
+  color: var(--fontColor);
+  background: var(--background);
+  font-size: var(--bodyFontSize);
+}
+
+p, ol, ul, dl, table {
+  margin: 0 0 var(--margin) 0;
+}
+
+/* Remove extra margin for nested lists */
+
+ul li ul {
+  margin-bottom: 0;
+}
+
+ol li ol {
+  margin-bottom: 0;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5 {
+  margin: var(--margin) 0;
+  font-weight: var(--headingFontWeight);
+  font-family: var(--headingFontFamily);
+  line-height: var(--headingLineHeight);
+  color: var(--headingFontColor);
+  &:not(:first-child) {
+    margin: 1.5rem 0;
+  }
+}
+
+h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
+  margin-top: 2.5rem;
+}
+
+/* Heading individual styles */
+
+h1 {
+  font-size: var(--fs1);
+}
+
+h2 {
+  font-size: var(--fs2);
+}
+
+h3 {
+  font-size: var(--fs3);
+}
+
+h4 {
+  font-size: var(--fs4);
+}
+
+h5 {
+  font-size: var(--fs5);
+}
+
+@media (--viewport-medium) {
+  h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
+    margin-top: 2rem;
+  }
+}
+
+a {
+  color: var(--linkColor);
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: var(--linkHoverColor);
+  text-decoration: underline;
+}
+
+mark {
+  background: var(--highlight);
+  padding: 0 3rem;
+}
+
+blockquote {
+  margin: 0 0 var(--margin) 0;
+  border-left: var(--blockquoteBorder);
+  padding: 0 2.4rem;
+  font-size: 2.4rem;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: var(--margin);
+  font-size: 1.6rem;
+  text-align: right;
+}
+
+pre {
+  border: 0;
+  border-radius: var(--borderRadius);
+  background: var(--codeBackground);
+  padding: 1.6rem;
+  tab-size: 2;
+  color: var(--codeColor);
+  font-family: var(--codeFontFamily);
+  font-size: var(--codeSize);
+  margin: 0 0 var(--margin) 0;
+}
+
+pre code {
+  font-family: var(--codeFontFamily);
+  line-height: 1.2;
+}
+
+kbd {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+  color: #333;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0 0.1em;
+  padding: 0.1em 0.6em;
+  text-shadow: 0 1px 0 #fff;
+}
+
+:not(pre)>code {
+  color: var(--codeColor);
+  background: var(--codeBackground);
+  font-family: var(--codeFontFamily);
+  font-size: var(--codeSize);
+  padding: 0 0.3rem;
+  border: var(--codeBorders);
+  border-radius: var(--borderRadius);
+}
+
+hr {
+  height: 0;
+  border: 0;
+  border-top: var(--borders);
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+}
+
+.full-container {
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.container {
+  max-width: var(--largeContainer);
+}
+
+.small-container {
+  max-width: var(--smallContainer);
+}
+
+.medium-container {
+  max-width: var(--mediumContainer);
+}
+
+.container, .small-container, .medium-container {
+  padding: 0 var(--padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-section {
+  padding: var(--contentPadding);
+}

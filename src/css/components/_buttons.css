@@ -1,0 +1,100 @@
+/* Buttons
+  =============== */
+  /* Custom Selector for accent and muted buttons */
+  @custom-selector :--accentButtons  .accent-button, a.accent-button;
+  @custom-selector :--mutedButtons .muted-button, a.muted-button;
+  @custom-selector :--roundButtons .round-button, a.round-button;
+  @custom-selector :--squareButtons .square-button, a.square-button;
+  @custom-selector :--fullButtons .full-button, a.full-button;
+
+   /* Main button styling */
+  :--buttons {
+    -webkit-appearance: none;
+    display: inline-block;
+    border: var(--buttonBorderWidth) var(--buttonBorderStyle) var(--buttonBorderColor);
+    border-radius: var(--buttonBorderRadius);
+    background: var(--buttonBackground);
+    color: var(--buttonColor);
+    font-weight: var(--buttonFontWeight);
+    font-family: var(--buttonFontFamily);
+    font-size: var(--buttonFontSize);
+    text-transform: var(--buttonTextTransform);
+    padding: 1.2rem 2rem;
+    margin: 0 0 .8rem 0;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+   /* Buttons on hover */
+  :--buttons:hover {
+    border: var(--buttonBorderWidth) var(--buttonBorderStyle) color-mod(var(--buttonBorderColor) shade(10%));
+    background: var(--buttonBackgroundHover);
+    color: var(--buttonColor);
+    text-decoration: none;
+  }
+
+   /* Buttons on focus */
+  :--buttons:focus,
+  :--buttons:active {
+    border: var(--buttonBorderWidth) var(--buttonBorderStyle) color-mod(var(--buttonBorderColor) shade(10%));
+    background: color-mod(var(--buttonBackground) shade(10%));
+    color: var(--buttonColor);
+    text-decoration: none;
+  }
+
+  /* Fix button issues for firefox */
+  :--buttons::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+
+  /* Secondary button color */
+  :--accentButtons {
+    color: var(--accentButtonColor);
+    border: 1px solid var(--accentButtonBackground);
+    background: var(--accentButtonBackground);
+  }
+  :--accentButtons:hover,
+  :--accentButtons:focus,
+  :--accentButtons:active {
+    color: var(--accentButtonColorHover);
+    border-color: color-mod(var(--accentButtonBackground) shade(10%));
+    background: color-mod(var(--accentButtonBackground) shade(10%));
+  }
+
+
+  /* Muted buttons */
+  :--mutedButtons {
+    background: var(--mutedBackground);
+    border: var(--mutedBorder);
+    color: var(--mutedColor);
+  }
+
+  :--mutedButtons:hover,
+  :--mutedButtons:focus,
+  :--mutedButtons:active {
+    color: var(--mutedColorHover);
+    border: var(--mutedBorderHover);
+    background: var(--mutedBackgroundHover);
+  }
+
+
+   /* Round buttons */
+  :--roundButtons {
+    border-radius: var(--roundedButtonRadius);
+  }
+
+   /* Square buttons */
+  :--squareButtons {
+    border-radius: 0;
+  }
+
+  /* Full width buttons (block level) */
+  :--fullButtons {
+    display: block;
+    width: 100%;
+  }
